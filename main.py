@@ -152,7 +152,7 @@ if __name__ == "__main__":
             # Use InverseEOSCalculator to calculate volume and density
             densities, temperatures, volumes = inverse_calculator.calculate_density(pressures, temperatures)
 
-            # Initialize ElasticConstantsCalculator and ElasticConstantsCorrection classes
+            # Initialize ElasticConstantsCalculator and ElasticConstantsConvertion classes
             calculator = ElasticConstantsCalculator()
             convertion = ElasticConstantsConvertion()
 
@@ -221,7 +221,7 @@ if __name__ == "__main__":
             densities = values
             pressures = [th.P_MGD(th.rho_to_V(rho), T) for rho, T in zip(densities, temperatures)]
 
-            # Initialize ElasticConstantsCalculator and ElasticConstantsCorrection classes
+            # Initialize ElasticConstantsCalculator and ElasticConstantsConvertion classes
             calculator = ElasticConstantsCalculator()
             convertion = ElasticConstantsConvertion()
 
