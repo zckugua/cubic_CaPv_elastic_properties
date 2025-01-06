@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 from thermal_P import Thermal
 from elastic_constants_calculator import ElasticConstantsCalculator
-from elastic_constants_correction import ElasticConstantsCorrection
+from elastic_constants_convertion import ElasticConstantsConvertion
 from elastic_modulus_velocity_calculator import ElasticModulusAndVelocityCalculator
 from inverse_eos_calculator import InverseEOSCalculator
 
@@ -108,8 +108,8 @@ if __name__ == "__main__":
             # Initialize ElasticConstantsCalculator class
             calculator = ElasticConstantsCalculator()
 
-            # Initialize ElasticConstantsCorrection class
-            correction = ElasticConstantsCorrection()
+            # Initialize ElasticConstantsConvertion class
+            convertion = ElasticConstantsConvertion()
 
             results = []
             for T, rho in zip(temperatures, densities):
