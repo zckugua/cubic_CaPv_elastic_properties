@@ -118,10 +118,10 @@ if __name__ == "__main__":
                     pressure = th.P_MGD(volume, T)
 
                     c11_value, c12_value, c44_value = calculator.calculate_elastic_constants(rho, T)
-                    corrected_c11, corrected_c12 = correction.correct_elastic_constants(th, volume, T, c11_value, c12_value)
+                    converted_c11, converted_c12 = convertion.adiabatic_elastic_constants(th, volume, T, c11_value, c12_value)
 
                     # Calculate elastic moduli and velocities
-                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(corrected_c11, corrected_c12, c44_value, rho)
+                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(converted_c11, converted_c12, c44_value, rho)
                     B_hill, G_hill, Vp_h, Vs_h, Vp_v, Vs_v, Vp_r, Vs_r = modulus_velocity_calculator.compute_modulus_and_velocity()
 
                     row = [T, rho, pressure, volume, c11_value, c12_value, c44_value, B_hill, G_hill, Vp_h, Vs_h]
@@ -154,7 +154,7 @@ if __name__ == "__main__":
 
             # Initialize ElasticConstantsCalculator and ElasticConstantsCorrection classes
             calculator = ElasticConstantsCalculator()
-            correction = ElasticConstantsCorrection()
+            convertion = ElasticConstantsConvertion()
 
             results = []
             for i in range(len(pressures)):
@@ -168,10 +168,10 @@ if __name__ == "__main__":
                     c11_value, c12_value, c44_value = calculator.calculate_elastic_constants(rho, T)
 
                     # Correct C11 and C12 to get adiabatic elastic constants
-                    corrected_c11, corrected_c12 = correction.correct_elastic_constants(th, volume, T, c11_value, c12_value)
+                    converted_c11, converted_c12 = convertion.adiabatic_elastic_constants(th, volume, T, c11_value, c12_value)
 
                     # Calculate elastic moduli and velocities
-                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(corrected_c11, corrected_c12, c44_value, rho)
+                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(converted_c11, converted_c12, c44_value, rho)
                     B_hill, G_hill, Vp_h, Vs_h, Vp_v, Vs_v, Vp_r, Vs_r = modulus_velocity_calculator.compute_modulus_and_velocity()
 
                     # Organize the results into rows
@@ -223,7 +223,7 @@ if __name__ == "__main__":
 
             # Initialize ElasticConstantsCalculator and ElasticConstantsCorrection classes
             calculator = ElasticConstantsCalculator()
-            correction = ElasticConstantsCorrection()
+            convertion = ElasticConstantsConvertion()
 
             results = []
             for i in range(len(temperatures)):
@@ -237,10 +237,10 @@ if __name__ == "__main__":
                     c11_value, c12_value, c44_value = calculator.calculate_elastic_constants(rho, T)
 
                     # Correct C11 and C12 to get adiabatic elastic constants
-                    corrected_c11, corrected_c12 = correction.correct_elastic_constants(th, volume, T, c11_value, c12_value)
+                    converted_c11, converted_c12 = convertion.adiabatic_elastic_constants(th, volume, T, c11_value, c12_value)
 
                     # Calculate elastic moduli and velocities
-                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(corrected_c11, corrected_c12, c44_value, rho)
+                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(converted_c11, converted_c12, c44_value, rho)
                     B_hill, G_hill, Vp_h, Vs_h, Vp_v, Vs_v, Vp_r, Vs_r = modulus_velocity_calculator.compute_modulus_and_velocity()
 
                     # Organize the results into rows
@@ -263,7 +263,7 @@ if __name__ == "__main__":
 
             # Initialize ElasticConstantsCalculator and ElasticConstantsCorrection classes
             calculator = ElasticConstantsCalculator()
-            correction = ElasticConstantsCorrection()
+            convertion = ElasticConstantsConvertion()
 
             results = []
             for i in range(len(pressures)):
@@ -277,10 +277,10 @@ if __name__ == "__main__":
                     c11_value, c12_value, c44_value = calculator.calculate_elastic_constants(rho, T)
 
                     # Correct C11 and C12 to get adiabatic elastic constants
-                    corrected_c11, corrected_c12 = correction.correct_elastic_constants(th, volume, T, c11_value, c12_value)
+                    converted_c11, converted_c12 = convertion.adiabatic_elastic_constants(th, volume, T, c11_value, c12_value)
 
                     # Calculate elastic moduli and velocities
-                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(corrected_c11, corrected_c12, c44_value, rho)
+                    modulus_velocity_calculator = ElasticModulusAndVelocityCalculator(converted_c11, converted_c12, c44_value, rho)
                     B_hill, G_hill, Vp_h, Vs_h, Vp_v, Vs_v, Vp_r, Vs_r = modulus_velocity_calculator.compute_modulus_and_velocity()
 
                     # Organize the results into rows
