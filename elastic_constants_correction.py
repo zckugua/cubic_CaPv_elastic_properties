@@ -1,4 +1,4 @@
-class ElasticConstantsCorrection:
+class ElasticConstantsConvertion:
     def __init__(self):
         """
         Initialize the ElasticConstantsCorrection class with the required parameters.
