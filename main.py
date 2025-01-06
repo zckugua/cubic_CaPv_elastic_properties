@@ -261,7 +261,7 @@ if __name__ == "__main__":
             # Use InverseEOSCalculator to calculate volume and density
             densities, temperatures, volumes = inverse_calculator.calculate_density(pressures, temperatures)
 
-            # Initialize ElasticConstantsCalculator and ElasticConstantsCorrection classes
+            # Initialize ElasticConstantsCalculator and ElasticConstantsConvertion classes
             calculator = ElasticConstantsCalculator()
             convertion = ElasticConstantsConvertion()
 
