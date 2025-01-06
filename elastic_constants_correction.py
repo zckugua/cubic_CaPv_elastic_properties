@@ -20,9 +20,9 @@ class ElasticConstantsCorrection:
         """
         return self.g0 * (V / self.V0)**self.q
 
-    def correct_elastic_constants(self, th, volume, temperature, c11, c12):
+    def adiabatic_elastic_constants(self, th, volume, temperature, c11, c12):
         """
-        Correct the isothermal elastic constants to adiabatic elastic constants.
+        Convert the isothermal elastic constants to adiabatic elastic constants.
         th: An instance of the Thermal class used to calculate the thermal expansion coefficient alpha
         volume: Current volume (A^3)
         temperature: Current temperature (K)
