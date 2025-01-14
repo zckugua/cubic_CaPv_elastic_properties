@@ -1,4 +1,4 @@
-# User Guide for Elastic Data Calculation Script
+# Elastic Data Calculation Script associated to the paper "Strong Precursor softening in cubic CaSiO3 perovskite"
 
 This document provides detailed instructions for using the elastic data calculation script. The script enables users to calculate elastic constants, moduli, and velocities based on input temperature and density or pressure ranges.
 
